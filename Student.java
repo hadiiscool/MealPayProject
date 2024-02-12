@@ -21,7 +21,7 @@ balance = 0;
 
 //methods
 
-public void chargeMeal(int day, int month){
+public void chargeMeal(int day, int month, double cost){
 Transaction cm = new Transaction(day, month, -7);
 balance-= 7.0; //this assumes that all meals are 7 dollars
 charges.add(cm);
