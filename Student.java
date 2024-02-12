@@ -28,4 +28,15 @@ charges.add(cm);
 }
 
 
+public void addFunds( int day, int month, int idNo, double amount){
+    Transaction addF = new Transaction(day, month, amount);
+    balance += amount;
+    charges.add(addF);
+}
+
+
+
+
+
+
 }

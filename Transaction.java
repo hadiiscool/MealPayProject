@@ -2,10 +2,10 @@
 public class Transaction{ 
 
     //fields
-private double charge;
+
 private int day;
 private int month;
-
+private double charge;
 
 //constructors
 
@@ -26,6 +26,9 @@ public int getDay(){
 
 public int getMonth(){
     return month;
+}
+public String toString(){
+    return "(" + month + "/" + day + ", " + charge + ")";
 }
 
 }
