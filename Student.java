@@ -21,8 +21,8 @@ balance = 0;
 
 //methods
 
-public void chargeMeal(int day, int month, int idNo){
-Transaction cm = new Transaction(day, month, idNo);
+public void chargeMeal(int day, int month){
+Transaction cm = new Transaction(day, month, -7);
 balance-= 7.0; //this assumes that all meals are 7 dollars
 charges.add(cm);
 }
@@ -36,7 +36,46 @@ public void addFunds( int day, int month, int idNo, double amount){
 
 
 
+//getters
+public int getIdNo(){
+    return idNo;
+}
+
+public double getBalance(){
+    return balance;
+}
+
+public ArrayList<Transaction> getCharges(){
+    return charges;
+}
+
+// end of getters
+//extra credit???? :)
+
+public ArrayList<Transaction> getTransactionByDate(int month, int day){ //makes an arraylist called transaction that takes the month/day of the trasnactions
+    ArrayList<Transaction> inDay = new ArrayList<Transaction>();//initialized one of these lists for each day
+    for(int i = 0; i < charges.size(); i++){ //runs through all charges
+        if((charges.get(i).getMonth() == month) && (charges.get(i).getDay() == day)){ //if the charge matches with the month provides and the day is the same...
+            inDay.add(charges.get(i)); //the charge gets added
+        }
+    }
+    
+    if(inDay.size() == 0){//protecting against the cases wheere thier is no transaction in a paricular day
+        return null; 
+    } 
+    else {
+    return inDay;
+    }
+}
+
+
+
+public String toString(){
+    return "Student:" + name + ", ID: " + idNo + ", Balance: " + balance + ", Transaction: " + charges.toString();
+}
+
 
 
 
 }
+
