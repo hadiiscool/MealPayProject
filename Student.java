@@ -52,7 +52,7 @@ public ArrayList<Transaction> getCharges(){
 // end of getters
 //extra credit???? :)
 
-public ArrayList<Transaction> getTransactionByDate(int month, int day){ //makes an arraylist called transaction that takes the month/day of the trasnactions
+public ArrayList<Transaction> getTransactionByDate(int day, int month){ //makes an arraylist called transaction that takes the month/day of the trasnactions
     ArrayList<Transaction> inDay = new ArrayList<Transaction>();//initialized one of these lists for each day
     for(int i = 0; i < charges.size(); i++){ //runs through all charges
         if((charges.get(i).getMonth() == month) && (charges.get(i).getDay() == day)){ //if the charge matches with the month provides and the day is the same...
