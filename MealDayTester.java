@@ -45,7 +45,7 @@ public class MealDayTester {
     System.out.println("testing hasidno methhon on idno 2:");
     System.out.println(school.hasIdNo(2).toString());;
     
-    System.out.println("Testing day-specific transcations(Extra credit)");
+    System.out.println("Testing day-specific transcations(Extra credit)Displaying all transaction on 2/4...");
     System.out.println(school.getTransactions(2, 4).toString());;
 
 

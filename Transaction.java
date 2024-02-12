@@ -9,10 +9,11 @@ private double charge;
 
 //constructors
 
-public Transaction(double myCharge, int myDay, int myMonth){
-charge = myCharge;
-day = myDay;
+public Transaction(int myMonth, int myDay, double myCharge){
 month = myMonth;
+day = myDay;
+charge = myCharge;
+
 }
 
 //methods
